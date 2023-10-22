@@ -1,13 +1,13 @@
 import styles from './Library.module.scss';
 import { Title } from 'Common/index';
 import Lib from 'Image/SVG/Library/library.svg';
-import Pic from 'Image/image.png';
+import Pic from 'Image/image.jpg';
 import Add from 'Image/SVG/Library/add.svg';
 
 export const Library = () => {
   return (
     <div className={styles.library}>
-      <div className="library__container">
+      <div className={styles.library__container}>
         <Title image={Lib}>Library</Title>
         <div className={styles.library__playlists}>
           <div className={styles.library__button}>

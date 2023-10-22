@@ -1,0 +1,12 @@
+.home {
+  padding: 10px 10px 10px 5px;
+  flex: 1 1 auto;
+  display: flex;
+  &__container {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+  &__interest {
+    margin-bottom: 30px;
+  }
+}
