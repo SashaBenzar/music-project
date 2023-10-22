@@ -1,0 +1,24 @@
+.header {
+  padding: 10px 5px 5px 10px;
+  &__logo {
+    h1 {
+      font-size: 32px;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+  &__menu {
+  }
+  &__list {
+    li {
+      padding: 10px 15px;
+    }
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    li img {
+      margin-right: 10px;
+    }
+  }
+}
