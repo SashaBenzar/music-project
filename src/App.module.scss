@@ -1,13 +1,11 @@
 .app {
+  height: calc(100% - 20px);
+  padding: 10px;
   display: grid;
-  grid-template-columns: 25% 75%;
-  grid-template-rows: 100%;
-  height: 100%;
-  &__menu {
-    display: flex;
-    flex-direction: column;
-  }
-  &__content {
-    display: flex;
-  }
+  grid-gap: 10px;
+  grid-template-columns: minmax(300px, 25%) minmax(300px, 75%);
+  grid-template-rows: 300px 1fr;
+  grid-template-areas:
+    'header main'
+    'side main';
 }

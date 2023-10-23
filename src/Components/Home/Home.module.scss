@@ -1,9 +1,6 @@
 .home {
-  padding: 10px 10px 10px 5px;
-  flex: 1 1 auto;
-  display: flex;
   &__container {
-    flex: 1 1 auto;
+    grid-area: main;
     overflow: auto;
   }
   &__interest {

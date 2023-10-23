@@ -1,12 +1,6 @@
 .header {
-  padding: 10px 5px 5px 10px;
-  &__logo {
-    h1 {
-      font-size: 32px;
-    }
-    img {
-      cursor: pointer;
-    }
+  &__container {
+    grid-area: header;
   }
   &__menu {
   }
