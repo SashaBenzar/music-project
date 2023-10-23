@@ -1,170 +1,31 @@
+@import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
-  font-family: 'Alatsi', sans-serif;
-  vertical-align: baseline;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-html {
-  height: 100%;
-}
+@import url('zero_styles.scss');
+@import url('custom_scroll.scss');
 
 body {
-  height: 100%;
-  line-height: 1;
-  font-size: 16px;
-  font-weight: 500;
-  scroll-behavior: smooth;
-  background: #1c1f27;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-#root {
-  height: 100%;
+  background: $bg-color;
 }
 
 [class*='__container'] {
   padding: 27px 12px 12px 12px;
   border-radius: 10px;
-  background: #393c42;
+  background: $container-color;
+  overflow: auto;
 }
 
 [class*='__button'] {
   padding: 10px;
   border-radius: 10px;
-  background: #4a4d55;
+  background: $button-color;
   transition: all 0.3s;
   cursor: pointer;
   user-select: none;
   &:hover {
-    background: #585c64;
+    background: $hover-color;
   }
   &:active {
-    background: #6b717c;
+    background: $active-color;
     transition: all 0.1s;
   }
 }
