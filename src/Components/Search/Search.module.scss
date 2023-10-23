@@ -1,0 +1,46 @@
+.search {
+  &__container {
+    grid-area: main;
+  }
+  &__bar {
+    position: relative;
+    margin-bottom: 50px;
+    img {
+      position: absolute;
+      margin-left: 25px;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
+      cursor: pointer;
+    }
+    input {
+      width: 50%;
+      border-radius: 25px;
+      background: #d9d9d9;
+      padding: 10px 0px 10px 70px;
+      font-size: 24px;
+      outline: none;
+    }
+    input::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__genres {
+  }
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    div {
+      flex: 0 1 calc(25% - 15px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      min-height: 250px;
+      border-radius: 10px;
+      background: #1c1f27;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.profile {
+  &__container {
+    grid-area: main;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  &__avatar {
+    width: 200px;
+    height: 200px;
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+  &__info {
+    white-space: nowrap;
+    h1 {
+      font-size: 64px;
+      white-space: nowrap;
+    }
+    h6 {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}

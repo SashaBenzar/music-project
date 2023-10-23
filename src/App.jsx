@@ -1,4 +1,4 @@
-import { Menu, Library, Home } from './Components';
+import { Menu, Library, Home, Search, Profile } from './Components';
 import styles from './App.module.scss';
 
 export const App = () => {
@@ -6,7 +6,7 @@ export const App = () => {
     <div className={styles.app}>
       <Menu />
       <Library />
-      <Home />
+      <Profile />
     </div>
   );
 };
