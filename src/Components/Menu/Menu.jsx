@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Menu.module.scss';
 import { Title } from 'Common/index';
 import Burger from 'Image/SVG/Menu/burger.svg';
@@ -9,21 +10,19 @@ export const Menu = () => {
   return (
     <div className={'header__container'}>
       <Title image={Burger}>Music</Title>
-      <nav className={styles.menu}>
-        <ul className={styles.header__list}>
-          <li className="header__button">
-            <img src={Home} alt="Home" />
-            Home
-          </li>
-          <li className="header__button">
-            <img src={Search} alt="Search" />
-            Search
-          </li>
-          <li className="header__button">
-            <img src={Profile} alt="Profile" />
-            Profile
-          </li>
-        </ul>
+      <nav className={styles.header__menu}>
+        <Link className={styles.header__button} to="/">
+          <img src={Home} alt="Home" />
+          Home
+        </Link>
+        <Link className={styles.header__button} to="/search">
+          <img src={Search} alt="Search" />
+          Search
+        </Link>
+        <Link className={styles.header__button} to="/profile">
+          <img src={Profile} alt="Profile" />
+          Profile
+        </Link>
       </nav>
     </div>
   );

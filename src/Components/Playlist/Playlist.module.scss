@@ -1,0 +1,42 @@
+.playlist {
+  &__container {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+  }
+  &__menu {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  &__image {
+    width: 300px;
+    height: 300px;
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 100%;
+      border-radius: 10px;
+    }
+  }
+  &__info {
+    h1 {
+      font-size: 64px;
+    }
+    h6 {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__play {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    img {
+      cursor: pointer;
+    }
+  }
+}

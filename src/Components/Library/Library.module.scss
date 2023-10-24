@@ -3,8 +3,10 @@
     grid-area: side;
   }
   &__playlists {
+    display: block;
     margin-bottom: 27px;
     overflow: auto;
+    text-decoration: none;
   }
   &__button {
     display: flex;

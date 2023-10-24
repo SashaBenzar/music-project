@@ -1,0 +1,35 @@
+.list {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+
+  &__music {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 8.5% 33.5% 24% 30% 4%;
+    grid-template-rows: 60px;
+    cursor: pointer;
+    h3 {
+      font-size: 24px;
+      padding-left: 20px;
+    }
+    h4 {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      &:not(:last-child) {
+        padding-left: 20px;
+      }
+    }
+  }
+  &__img {
+    width: 90px;
+    height: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
