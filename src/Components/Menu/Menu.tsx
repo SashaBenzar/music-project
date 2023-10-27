@@ -6,7 +6,7 @@ import Home from 'Image/SVG/Menu/home.svg';
 import Profile from 'Image/SVG/Menu/profile.svg';
 import Search from 'Image/SVG/Menu/search.svg';
 
-export const Menu = () => {
+export const Menu: React.FC = () => {
   return (
     <div className={'header__container'}>
       <Title image={Burger}>Music</Title>

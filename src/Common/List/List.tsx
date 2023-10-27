@@ -1,7 +1,7 @@
 import styles from './List.module.scss';
 import Pic from 'Image/image.jpg';
 
-export const List = () => {
+export const List: React.FC = () => {
   return (
     <div className={styles.list}>
       <div className={styles.list__music}>

@@ -4,7 +4,7 @@ import Pic from 'Image/image.jpg';
 import Play from 'Image/SVG/Playlist/play.svg';
 import Mix from 'Image/SVG/Playlist/mix.svg';
 
-export const Playlist = () => {
+export const Playlist: React.FC = () => {
   return (
     <div className={styles.playlist__container}>
       <div className={styles.playlist__menu}>

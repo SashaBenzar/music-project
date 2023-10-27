@@ -3,7 +3,7 @@ import { Title, List } from 'Common/index';
 import Pic from 'Image/image.jpg';
 import Fav from 'Image/SVG/Profile/favorite.svg';
 
-export const Profile = () => {
+export const Profile: React.FC = () => {
   return (
     <div className={styles.profile__container}>
       <div className={styles.profile__user}>

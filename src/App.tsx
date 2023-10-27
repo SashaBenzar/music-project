@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Menu, Library, Home, Search, Profile, Playlist } from './Components';
 import styles from './App.module.scss';
 
-export const App = () => {
+export const App: React.FC = () => {
   return (
     <div className={styles.app}>
       <Menu />

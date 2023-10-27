@@ -3,7 +3,7 @@ import { Title } from 'Common/index';
 import Sea from 'Image/SVG/Search/search.svg';
 import Gen from 'Image/SVG/Search/genres.svg';
 
-export const Search = () => {
+export const Search: React.FC = () => {
   return (
     <div className={styles.search__container}>
       <div className={styles.search__bar}>

@@ -5,7 +5,7 @@ import Lib from 'Image/SVG/Library/library.svg';
 import Pic from 'Image/image.jpg';
 import Add from 'Image/SVG/Library/add.svg';
 
-export const Library = () => {
+export const Library: React.FC = () => {
   return (
     <div className={styles.library__container}>
       <Title image={Lib}>Library</Title>
