@@ -1,6 +1,7 @@
 .header {
   &__container {
     grid-area: header;
+    padding: 27px 12px 12px 12px !important;
   }
   &__menu {
     display: flex;

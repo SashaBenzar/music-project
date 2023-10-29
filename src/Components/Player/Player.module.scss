@@ -1,0 +1,67 @@
+.player {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: #1c1f27;
+  img {
+    cursor: pointer;
+  }
+  &__bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+  }
+  &__progress {
+    width: 50%;
+    border-top: 2px solid magenta;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__logo {
+    width: 80px;
+    height: 80px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  &__title {
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__rate {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  &__settings {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}

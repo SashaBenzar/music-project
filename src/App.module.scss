@@ -8,4 +8,6 @@
   grid-template-areas:
     'header main'
     'side main';
+  position: relative;
+  overflow: hidden;
 }

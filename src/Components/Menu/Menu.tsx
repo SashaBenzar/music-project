@@ -8,7 +8,7 @@ import Search from 'Image/SVG/Menu/search.svg';
 
 export const Menu: React.FC = () => {
   return (
-    <div className={'header__container'}>
+    <div className={styles.header__container}>
       <Title image={Burger}>Music</Title>
       <nav className={styles.header__menu}>
         <Link className={styles.header__button} to="/">

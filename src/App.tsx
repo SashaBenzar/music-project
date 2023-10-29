@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { Menu, Library, Home, Search, Profile, Playlist } from './Components';
+import { Menu, Library, Home, Search, Profile, Playlist, Player } from './Components';
+import { Player_info } from 'Common/index';
 import styles from './App.module.scss';
 
 export const App: React.FC = () => {
@@ -14,6 +15,7 @@ export const App: React.FC = () => {
         <Route path="/playlist" element={<Playlist />} />
         <Route path="*" element={<h1>NOT FOUND</h1>} />
       </Routes>
+      <Player />
     </div>
   );
 };
