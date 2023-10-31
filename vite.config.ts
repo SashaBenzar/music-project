@@ -11,6 +11,8 @@ export default defineConfig({
       Components: `${path.resolve(__dirname, './src/Components/')}`,
       Image: `${path.resolve(__dirname, './src/Image/')}`,
       Common: `${path.resolve(__dirname, './src/Common/')}`,
+      Redux: `${path.resolve(__dirname, './src/Redux/')}`,
+      Types: `${path.resolve(__dirname, './src/Types/')}`,
     },
   },
 });

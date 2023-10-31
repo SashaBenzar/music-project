@@ -3,6 +3,7 @@ import { Music_list } from 'Common/index';
 import Pic from 'Image/image.jpg';
 import Play from 'Image/SVG/Playlist/play.svg';
 import Mix from 'Image/SVG/Playlist/mix.svg';
+import { useEffect } from 'react';
 
 export const Playlist: React.FC = () => {
   return (

@@ -20,7 +20,9 @@
       "@/*": ["./src/*", "./dist/*", ""],
       "Components/*": ["src/Components/*"],
       "Images/*": ["src/Image/*"],
-      "Common/*": ["src/Common/*"]
+      "Common/*": ["src/Common/*"],
+      "Redux/*": ["src/Redux/*"],
+      "Types/*": ["src/Types/*"]
     }
   },
   "include": ["src"],
