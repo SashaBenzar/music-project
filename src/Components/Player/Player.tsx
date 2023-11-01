@@ -23,7 +23,7 @@ export const Player: React.FC = () => {
   const [isPlay, setIsPlay] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [mute, setMute] = React.useState(false);
-  const [loop, setLoop] = React.useState(false);
+  const [isLoop, setLoop] = React.useState(false);
   const [volume, setVolume] = React.useState(10);
   const [duration, setDuration] = React.useState(0);
   const [elapsed, setElapsed] = React.useState(0);
@@ -36,15 +36,11 @@ export const Player: React.FC = () => {
     audio.volume = volume / 100;
     if (isPlay) {
       setInterval(() => {
-        if (audio.duration != audio.currentTime) {
-          setDuration(audio.duration);
-          setElapsed(audio.currentTime);
-        } else {
-          toggleNext();
-        }
+        setDuration(audio.duration);
+        setElapsed(audio.currentTime);
       }, 1000);
     }
-  }, [volume, isPlay, loop]);
+  }, [volume, isPlay, isLoop]);
 
   function formatTime(_time: number) {
     if (_time && !isNaN(_time)) {
@@ -121,7 +117,13 @@ export const Player: React.FC = () => {
           <></>
         ) : data ? (
           <>
-            <audio src={data[index].url} ref={musicRef} muted={mute} />
+            <audio
+              src={data[index].url}
+              ref={musicRef}
+              muted={mute}
+              loop={isLoop ? true : false}
+              onEnded={toggleNext}
+            />
           </>
         ) : null}
         <div className={styles.player__bar} onClick={checkWidth} ref={clickRef}>
@@ -154,7 +156,14 @@ export const Player: React.FC = () => {
         </div>
         <div className={styles.player__settings}>
           <img src={volume == 0 || mute ? VOff : VOn} onClick={() => setMute(!mute)} alt="volume" />
-          <img src={Loop} alt="loop" onClick={() => setLoop(!loop)} />
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={volume}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setVolume(Number(e.target.value))}
+          />
+          <img src={Loop} alt="loop" onClick={() => setLoop(!isLoop)} />
           <img src={Rand} alt="random" />
           <img src={open ? CaretOpen : CaretClose} onClick={() => setOpen(!open)} alt="open" />
         </div>
