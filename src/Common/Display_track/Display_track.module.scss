@@ -1,0 +1,32 @@
+.display {
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__logo {
+    width: 80px;
+    height: 80px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  &__title {
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__rate {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+}

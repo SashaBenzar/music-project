@@ -1,0 +1,19 @@
+.controls {
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+  &__time {
+    display: flex;
+    h3 {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      width: 60px;
+      &:nth-child(2) {
+        width: 5px;
+      }
+    }
+  }
+}
