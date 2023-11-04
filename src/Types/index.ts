@@ -16,7 +16,7 @@ export type Music = {
 
 export type InfoType = {
   open: boolean;
-  data: Music[];
+  tracks: Music[];
   index: number;
   setIndex: (index: number | ((prev: number) => number)) => void;
   musicRef: React.MutableRefObject<HTMLMediaElement>;
@@ -38,10 +38,12 @@ export type SettingsType = {
   setMute: (mute: boolean) => void;
   isLoop: boolean;
   setLoop: (isLoop: boolean) => void;
+  tracks: Music[];
+  setTracks: React.Dispatch<React.SetStateAction<Music[] | undefined>>;
 };
 
 export type DisplayType = {
-  data: Music[];
+  tracks: Music[];
   index: number;
 };
 
@@ -52,7 +54,7 @@ export type ControlsType = {
   setElapsed: (elapsed: number) => void;
   index: number;
   setIndex: (index: number | ((prev: number) => number)) => void;
-  data: Music[];
+  tracks: Music[];
   toggleNext: () => void;
   formatTime: (index: number) => string;
 };

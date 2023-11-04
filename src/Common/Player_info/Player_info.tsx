@@ -5,7 +5,7 @@ import React from 'react';
 
 export const Player_info: React.FC<InfoType> = ({
   open,
-  data,
+  tracks,
   index,
   setIndex,
   musicRef,
@@ -15,13 +15,13 @@ export const Player_info: React.FC<InfoType> = ({
   const [text, setText] = React.useState(false);
   const toggleChoose = (i: number) => {
     setIndex(i);
-    musicRef.current.src = data[i].url;
+    musicRef.current.src = tracks[i].url;
   };
 
   return (
     <div className={styles.info__container} style={open ? { bottom: '0' } : { bottom: '-100%' }}>
       <div className={styles.info__preview}>
-        <img src={data[index].artwork} alt="preview" />
+        <img src={tracks[index].artwork} alt="preview" />
       </div>
       <div className={styles.info__sidebar}>
         <div className={styles.info__menu}>
@@ -30,14 +30,14 @@ export const Player_info: React.FC<InfoType> = ({
           </button>
           <button
             className="info__button"
-            disabled={!data[index].lyric}
+            disabled={!tracks[index].lyric}
             onClick={() => setText(true)}>
             Lyrics
           </button>
         </div>
         <div className={styles.info__tracks}>
           {!text ? (
-            data.map((track: Music, i: number) => (
+            tracks.map((track: Music, i: number) => (
               <div
                 className={`${styles.info__music} ${i == index ? '__button' : ''}`}
                 key={track.id}
@@ -51,7 +51,7 @@ export const Player_info: React.FC<InfoType> = ({
             ))
           ) : (
             <div style={{ whiteSpace: 'pre-line' }}>
-              {data[index].lyric.split('\\n').join('\n')}
+              {tracks[index].lyric.split('\\n').join('\n')}
             </div>
           )}
         </div>

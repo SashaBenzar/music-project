@@ -14,7 +14,7 @@ export const Controls: React.FC<ControlsType> = ({
   setElapsed,
   index,
   setIndex,
-  data,
+  tracks,
   toggleNext,
   formatTime,
 }) => {
@@ -40,11 +40,11 @@ export const Controls: React.FC<ControlsType> = ({
 
   const togglePrev = () => {
     if (index <= 0) {
-      setIndex(data.length - 1);
-      musicRef.current.src = data[data.length - 1].url;
+      setIndex(tracks.length - 1);
+      musicRef.current.src = tracks[tracks.length - 1].url;
     } else {
       setIndex((prev) => prev - 1);
-      musicRef.current.src = data[index - 1].url;
+      musicRef.current.src = tracks[index - 1].url;
     }
   };
 

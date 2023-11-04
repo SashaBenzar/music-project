@@ -10,7 +10,12 @@ export const musicApi = createApi({
         url: `music`,
       }),
     }),
+    getRandomMusic: builder.query<Music[], string>({
+      query: (param) => ({
+        url: `music`,
+      }),
+    }),
   }),
 });
 
-export const { useGetMusicQuery } = musicApi;
+export const { useGetMusicQuery, useGetRandomMusicQuery } = musicApi;
